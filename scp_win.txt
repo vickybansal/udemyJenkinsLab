@@ -1,0 +1,7 @@
+stages {
+        stage('SCP JAR file') {
+            steps {
+                bat '"c:\\Program Files\\git\\usr\\bin\\scp.exe" -i "c:\\Users\\tom\\.ssh\\azure\\id_rsa" C:\\Users\\tom\\.jenkins\\workspace\\scp-to-linux\\abc.jar tom@xy.xyz.xy.xz:abc.jar'
+                bat '"c:\\Program Files\\git\\usr\\bin\\ssh.exe" -i "c:\\Users\\tom\\.ssh\\azure\\id_rsa" tom@xy.xyz.xy.xz ls -ltr'
+            }
+        }
